@@ -9,7 +9,7 @@ const AllImages = () => {
 
     const fetchImages = async () => {
         try {
-            const response = await axios.get('http://localhost:4234/api/All-images');
+            const response = await axios.get('https://www.api.bkexporttradeco.store/api/All-images');
             setFetchedImages(response.data.reverse());
 
         } catch (error) {
@@ -25,7 +25,7 @@ const AllImages = () => {
         try {
             console.log(imageId, albumId)
             // Send DELETE request to delete the image
-            const res = await axios.delete(`http://localhost:4234/api/image/${imageId}`);
+            const res = await axios.delete(`https://www.api.bkexporttradeco.store/api/image/${imageId}`);
             // After successful deletion, update state to reflect changes
             console.log(res.data)
             toast.success('Image Deleted')

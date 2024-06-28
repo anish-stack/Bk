@@ -102,7 +102,7 @@ const Cart = () => {
         e.preventDefault(); // Prevent default form submission behavior
         console.log(formData);
         try {
-            const res = await axios.post('http://localhost:4234/api/apply-vouchers', formData);
+            const res = await axios.post('https://www.api.bkexporttradeco.store/api/apply-vouchers', formData);
             const RoundTotal = Math.round(res.data.data.discountedTotal)
             setLastprice(RoundTotal);
               setmessage('Coupon is Applied Successfull')

@@ -8,7 +8,7 @@ const AllVouchers = () => {
   useEffect(() => {
     const fetchVouchers = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/vouchers');  // Adjust the endpoint as needed
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/vouchers');  // Adjust the endpoint as needed
         setVouchers(response.data.data);
       } catch (error) {
         console.error("Error fetching vouchers:", error);
@@ -20,7 +20,7 @@ const AllVouchers = () => {
 
   const markActive = async (id) => {
     try {
-      await axios.put(`http://localhost:4234/api/vouchers/activateVoucher/${id}`);
+      await axios.put(`https://www.api.bkexporttradeco.store/api/vouchers/activateVoucher/${id}`);
       // Update the local state to reflect the change
       setVouchers(vouchers.map(voucher => voucher._id === id ? { ...voucher, Active: true } : voucher));
     } catch (error) {
@@ -30,7 +30,7 @@ const AllVouchers = () => {
 
   const markInActive = async (id) => {
     try {
-      await axios.put(`http://localhost:4234/api/vouchers/deactivateVoucher/${id}`);
+      await axios.put(`https://www.api.bkexporttradeco.store/api/vouchers/deactivateVoucher/${id}`);
       // Update the local state to reflect the change
       setVouchers(vouchers.map(voucher => voucher._id === id ? { ...voucher, Active: false } : voucher));
     } catch (error) {
@@ -40,7 +40,7 @@ const AllVouchers = () => {
 
   const markDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4234/api/vouchers/deleteVoucher/${id}`);
+      await axios.delete(`https://www.api.bkexporttradeco.store/api/vouchers/deleteVoucher/${id}`);
       // Remove the voucher from local state
       setVouchers(vouchers.filter(voucher => voucher._id !== id));
     } catch (error) {

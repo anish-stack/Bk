@@ -8,7 +8,7 @@ const Contacts = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/getContact');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/getContact');
         setContacts(response.data);
         setLoading(false);
       } catch (error) {

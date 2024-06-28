@@ -143,7 +143,7 @@ const CreateProduct = () => {
 
     try {
       // Make Axios request
-      const response = await axios.post('http://localhost:4234/api/create-products', formData, {
+      const response = await axios.post('https://www.api.bkexporttradeco.store/api/create-products', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -190,7 +190,7 @@ const CreateProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/get-tags');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-tags');
         setTags(response.data.data);
 
       } catch (error) {
@@ -213,7 +213,7 @@ const CreateProduct = () => {
   useEffect(() => {
     const fetchDataCat = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/get-all-main-category');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-all-main-category');
         console.log(response.data.data)
         setCategories(response.data.data);
 
@@ -234,7 +234,7 @@ const CreateProduct = () => {
   const fetchSubCat = async () => {
     try {
       setIsLoading(true); // Set loading state to true when fetching subcategories
-      const response = await axios.get(`http://localhost:4234/api/get-title/${selectedCat}`);
+      const response = await axios.get(`https://www.api.bkexporttradeco.store/api/get-title/${selectedCat}`);
       setSubCategories(response.data.data);
       setIsLoading(false);
     } catch (error) {

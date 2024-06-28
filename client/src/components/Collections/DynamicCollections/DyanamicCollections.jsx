@@ -9,7 +9,7 @@ const DynamicCollections = () => {
 
     const fetchCategory = async () => {
         try {
-            const res = await axios.get(`http://localhost:4234/api/get-category`);
+            const res = await axios.get(`https://www.api.bkexporttradeco.store/api/get-category`);
             const dataOfRes = res.data.data;
             const filterRes = dataOfRes.filter(item => item.MainCategory === Collection);
             console.log(filterRes)

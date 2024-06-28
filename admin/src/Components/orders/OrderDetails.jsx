@@ -15,7 +15,7 @@ const OrderDetails = () => {
   useEffect(() => {
     const fetchOrderDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:4234/api/single-orders/${id}`);
+        const response = await axios.get(`https://www.api.bkexporttradeco.store/api/single-orders/${id}`);
         setOrder(response.data.data);
         console.log(response.data.data)
       } catch (error) {
@@ -28,7 +28,7 @@ const OrderDetails = () => {
 
   // const handleStatusUpdate = async () => {
   //   try {
-  //     const res = await axios.post(`http://localhost:4234/api/update-order`, {
+  //     const res = await axios.post(`https://www.api.bkexporttradeco.store/api/update-order`, {
   //       status: newStatus,
   //       orderId: id
   //     });
@@ -45,7 +45,7 @@ const OrderDetails = () => {
   }
   // const handlePrint = async (id) => {
   //   try {
-  //     const res = await axios.get(`http://localhost:4234/api/finduserbyid/${id}`);
+  //     const res = await axios.get(`https://www.api.bkexporttradeco.store/api/finduserbyid/${id}`);
   //     console.log(res.data.data);
   //     setUser(res.data.data)
   //   } catch (error) {

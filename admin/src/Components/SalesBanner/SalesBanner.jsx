@@ -7,7 +7,7 @@ const SalesBanner = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4234/api/get-sales-Banners"
+          "https://www.api.bkexporttradeco.store/api/get-sales-Banners"
         );
         setBanners(response.data.data);
       } catch (error) {
@@ -23,7 +23,7 @@ useEffect(()=>{
 
   const deleteBanner = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4234/api/delete-sales-Banners/${id}`);
+      const res = await axios.delete(`https://www.api.bkexporttradeco.store/api/delete-sales-Banners/${id}`);
       alert('Banner Deleted Successfully');
       console.log(res.data);
       // Refresh banners after deletion

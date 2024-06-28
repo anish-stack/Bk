@@ -40,7 +40,7 @@ setIsloading(true)
 
       console.log(formDataToSend)
       const response = await axios.post(
-        "http://localhost:4234/api/create-category",
+        "https://www.api.bkexporttradeco.store/api/create-category",
         formDataToSend,{
           headers: {
             'Content-Type': 'multipart/form-data'

@@ -6,7 +6,7 @@ const Footer = () => {
     const [items, setItem] = useState([])
     const handleFetchMainCategorey = async () => {
         try {
-            const res = await axios.get('http://localhost:4234/api/get-all-main-category')
+            const res = await axios.get('https://www.api.bkexporttradeco.store/api/get-all-main-category')
             console.log(res.data.data)
             setItem(res.data.data)
         } catch (error) {

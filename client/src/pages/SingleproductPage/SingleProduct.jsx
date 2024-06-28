@@ -17,7 +17,7 @@ const SingleProduct = () => {
     const dispatch = useDispatch()
     const fetchSingleProduct = useCallback(async () => {
         try {
-            const response = await axios.get(`http://localhost:4234/api/get-products-name/${name}/${id}`);
+            const response = await axios.get(`https://www.api.bkexporttradeco.store/api/get-products-name/${name}/${id}`);
             console.log(response.data);
             setProduct(response.data.data); // Assuming response.data is the product object
         } catch (error) {

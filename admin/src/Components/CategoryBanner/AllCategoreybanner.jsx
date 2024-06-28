@@ -14,7 +14,7 @@ const AllCategoreybanner = () => {
     
     const fetchDataDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:4234/api/delete-redirect/${id}`);
+            const response = await axios.delete(`https://www.api.bkexporttradeco.store/api/delete-redirect/${id}`);
             console.log(response.data)
             fetchData()
         } catch (error) {
@@ -23,7 +23,7 @@ const AllCategoreybanner = () => {
     };
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:4234/api/all-redirect');
+            const response = await axios.get('https://www.api.bkexporttradeco.store/api/all-redirect');
             setCategories(response.data.data);
         } catch (error) {
             console.error('Error fetching data:', error);

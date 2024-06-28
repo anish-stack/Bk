@@ -8,7 +8,7 @@ const AllBanner = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4234/api/get-Banners"
+          "https://www.api.bkexporttradeco.store/api/get-Banners"
         );
         setBanners(response.data.data);
       } catch (error) {
@@ -23,7 +23,7 @@ useEffect(()=>{
 
   const makeActive = async (id) => {
     try {
-      const res = await axios.put(`http://localhost:4234/api/Banner/active/${id}`);
+      const res = await axios.put(`https://www.api.bkexporttradeco.store/api/Banner/active/${id}`);
       alert('Banner Activated Successfully');
       console.log(res.data);
       // Refresh banners after activation
@@ -35,7 +35,7 @@ useEffect(()=>{
 
   const makeInactive = async (id) => {
     try {
-      const res = await axios.put(`http://localhost:4234/api/Banner/inactive/${id}`);
+      const res = await axios.put(`https://www.api.bkexporttradeco.store/api/Banner/inactive/${id}`);
       alert('Banner Deactivated Successfully');
       console.log(res.data);
       // Refresh banners after deactivation
@@ -47,7 +47,7 @@ useEffect(()=>{
 
   const deleteBanner = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4234/api/delete-Banners/${id}`);
+      const res = await axios.delete(`https://www.api.bkexporttradeco.store/api/delete-Banners/${id}`);
       alert('Banner Deleted Successfully');
       console.log(res.data);
       // Refresh banners after deletion

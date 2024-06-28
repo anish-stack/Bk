@@ -34,7 +34,7 @@ const CreateCategoryFormBanner = () => {
     const fetchCat = async () => {
         setIsLoading(true)
         try {
-            const response = await axios.get('http://localhost:4234/api/get-category')
+            const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-category')
             console.log(response.data.data)
             const datas = response.data.data.map((item) => (item.title))
 
@@ -62,7 +62,7 @@ const CreateCategoryFormBanner = () => {
 
             console.log(formDataToSend)
             const response = await axios.post(
-                "http://localhost:4234/api/create-redirect",
+                "https://www.api.bkexporttradeco.store/api/create-redirect",
                 formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data'

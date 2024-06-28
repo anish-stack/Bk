@@ -104,7 +104,7 @@ const EditProject = () => {
   useEffect(() => {
     const fetchMainData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4234/api/get-products-name/${name}/${id}`);
+        const response = await axios.get(`https://www.api.bkexporttradeco.store/api/get-products-name/${name}/${id}`);
         const fetchedData = response.data.data;
         console.log(fetchedData);
         // Update formdata with fetched data
@@ -139,7 +139,7 @@ const EditProject = () => {
 
     try {
       // Make Axios request
-      const response = await axios.patch(`http://localhost:4234/api/update-products/${id}`, formdata, {
+      const response = await axios.patch(`https://www.api.bkexporttradeco.store/api/update-products/${id}`, formdata, {
 
       });
       // alert("Product Updated")
@@ -186,7 +186,7 @@ const EditProject = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/get-tags');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-tags');
         setTags(response.data.data);
 
       } catch (error) {
@@ -209,7 +209,7 @@ const EditProject = () => {
   useEffect(() => {
     const fetchDataCat = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/get-all-main-category');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-all-main-category');
         console.log(response.data.data)
         setCategories(response.data.data);
 
@@ -230,7 +230,7 @@ const EditProject = () => {
   const fetchSubCat = async () => {
     try {
       setIsLoading(true); // Set loading state to true when fetching subcategories
-      const response = await axios.get(`http://localhost:4234/api/get-title/${selectedCat}`);
+      const response = await axios.get(`https://www.api.bkexporttradeco.store/api/get-title/${selectedCat}`);
       setSubCategories(response.data.data);
       setIsLoading(false);
     } catch (error) {

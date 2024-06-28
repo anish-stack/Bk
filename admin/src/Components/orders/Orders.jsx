@@ -13,7 +13,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/admin-orders');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/admin-orders');
         setAdminOrders(response.data.data);
         // console.log(response.data)
         const OrderBy = response.data.data

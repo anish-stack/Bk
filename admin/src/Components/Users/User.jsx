@@ -7,7 +7,7 @@ const User = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:4234/api/All-users');
+        const response = await axios.get('https://www.api.bkexporttradeco.store/api/All-users');
         setUsers(response.data.users);
         console.log(response.data)
       } catch (error) {

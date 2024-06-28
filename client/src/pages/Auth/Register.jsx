@@ -68,7 +68,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:4234/api/register', formData);
+            const response = await axios.post('https://www.api.bkexporttradeco.store/api/register', formData);
             console.log(response.data);
             toast.success('Registration Successful', {
                 style: {

@@ -15,7 +15,7 @@ const CreateVoucher = ({ onCreate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4234/api/vouchers/create-vouchers', formData);  // Adjust the endpoint as needed
+      const response = await axios.post('https://www.api.bkexporttradeco.store/api/vouchers/create-vouchers', formData);  // Adjust the endpoint as needed
       console.log(response.data.data);
       toast.success('Coupon Code Generated Successfully');
       //   setFormData({ CouponeCode: '', HowMuchPercentageof: '', Active: true });

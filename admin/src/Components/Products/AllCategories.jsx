@@ -8,7 +8,7 @@ const AllCategories = () => {
   const [isLoading, setIsLoading] = useState(true);
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:4234/api/get-category');
+      const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-category');
 
       setCategories(response.data.data);
 
@@ -33,7 +33,7 @@ const AllCategories = () => {
 
   const handleDeleteCategory = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:4234/api/delete-category/${id}`);
+      const response = await axios.delete(`https://www.api.bkexporttradeco.store/api/delete-category/${id}`);
       console.log('Category deleted successfully:', id);
       console.log(response.data);
       fetchData();

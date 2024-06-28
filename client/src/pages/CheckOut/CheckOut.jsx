@@ -59,7 +59,7 @@ const CheckOut = () => {
     const checkoutHandler = async (e) => {
         e.preventDefault();
         try {
-            const { data: { order } } = await axios.post("http://localhost:4234/api/Create-payment", {
+            const { data: { order } } = await axios.post("https://www.api.bkexporttradeco.store/api/Create-payment", {
                 amount: formData.finalPrice
             });
 
@@ -71,7 +71,7 @@ const CheckOut = () => {
                 description: "Payment Of Products",
                 image: "https://i.pinimg.com/originals/9e/ff/85/9eff85f9a3f9540bff61bbeffa0f6305.jpg",
                 order_id: order.id,
-                callback_url: "http://localhost:4234/api/paymentverification",
+                callback_url: "https://www.api.bkexporttradeco.store/api/paymentverification",
                 prefill: {
                     name: formData.UserInfo.Name,
                     email: formData.UserInfo.Email,

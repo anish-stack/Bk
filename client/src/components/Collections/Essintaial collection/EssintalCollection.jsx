@@ -16,7 +16,7 @@ const EssentialCollection = () => {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get('http://localhost:4234/api/all-redirect');
+            const res = await axios.get('https://www.api.bkexporttradeco.store/api/all-redirect');
             setEx(res.data.data);
         } catch (error) {
             console.log(error);

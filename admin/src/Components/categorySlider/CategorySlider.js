@@ -18,7 +18,7 @@ const CategorySlider = () => {
     const handleCategories= async()=>{
         try {
 
-            const response = await axios.get("http://localhost:4234/api/getAllCategorey")
+            const response = await axios.get("https://www.api.bkexporttradeco.store/api/getAllCategorey")
             console.log(response.data);
             setCateg(response.data)
             

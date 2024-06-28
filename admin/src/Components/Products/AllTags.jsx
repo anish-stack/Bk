@@ -10,7 +10,7 @@ const AllTags = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:4234/api/get-tags');
+                const response = await axios.get('https://www.api.bkexporttradeco.store/api/get-tags');
                 setTags(response.data.data);
                 setIsLoading(false);
             } catch (error) {
@@ -24,7 +24,7 @@ const AllTags = () => {
 
     const handleDeleteTag = async (id) => {
         try {
-            await axios.delete(`http://localhost:4234/api/delete-tags/${id}`);
+            await axios.delete(`https://www.api.bkexporttradeco.store/api/delete-tags/${id}`);
             // Update tags after successful deletion
             setTags(tags.filter(tag => tag._id !== id));
             toast.success('Tag deleted successfully:')

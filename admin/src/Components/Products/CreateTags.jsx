@@ -24,7 +24,7 @@ const CreateTags = () => {
     e.preventDefault();
     try {
       // Send form data to server or perform other actions as needed
-      const res = await axios.post('http://localhost:4234/api/Make-tags',formData)
+      const res = await axios.post('https://www.api.bkexporttradeco.store/api/Make-tags',formData)
       console.log('Tags created successfully!', formData);
       // Reset form after successful submission
       toast.success("Tags created successfully!")
