@@ -1,0 +1,45 @@
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding: 2rem;
+    transform: translate(-50%, -50%);
+}
+
+.content h2 {
+
+    font-size: 2rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.content p {
+    margin-top: 12px;
+    font-weight: 500;
+    color: black;
+    text-shadow: 2px 1px #0c0c0c48;
+    width: 80%;
+}
+.hovers{
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+.hovers:hover > img{
+    transform: scale(1.02);
+}
+
+@media screen and (max-width:768px) {
+    .content h2 {
+      
+        font-size: 1rem;
+   
+    }
+    .hovers{
+        margin: auto!important;
+    }
+    .content p {
+        width: 100%;
+    }
+    
+}

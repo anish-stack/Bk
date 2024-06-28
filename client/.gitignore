@@ -1,0 +1,22 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore build output
+build/
+
+# Ignore dependency lock files
+yarn.lock
+package-lock.json
+
+# Ignore IDE/Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore logs
+logs/
+*.log

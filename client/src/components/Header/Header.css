@@ -1,0 +1,169 @@
+.count-number {
+    top: -10px;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: #16153C;
+    right: 0;
+}
+.li-drop{
+    text-align: center;
+    height: 25px;
+    width: 150px;
+}
+.leftsdown{
+    left: 60%!important;
+}
+.dropdown {
+    position: absolute;
+    left: 50%;
+    /* width: 100%; */
+    z-index: 99;
+    transform: translate(-50%);
+    top: 14%;
+    
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* padding: 5px; */
+    /* line-height: 2; */
+    /* font-size: 1.3rem; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: #16153C; */
+}
+
+.dropdown li {
+    cursor: pointer;
+    /* font-size: 10px; */
+}
+
+.dropdown a {
+    font-size: 17px;
+}
+
+.dropdown a:hover {
+    background-color: #164D87;
+    color: white;
+    /* padding: 8px 6px; */
+}
+
+.top-header {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: #16153C;
+    color: white;
+}
+
+.top-header .front {
+    height: 100%;
+
+    position: absolute;
+    /* transform: ; */
+    opacity: 1;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: anime1 30s linear infinite;
+}
+
+@keyframes anime1 {
+    0% {
+        left: 0%;
+    }
+
+    49.8% {
+        left: -100%;
+        opacity: 1;
+    }
+
+    49.9% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    50% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    50.1% {
+        left: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.top-header .back {
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation: anime2 30s linear infinite;
+    /* background-color: white; */
+}
+
+@keyframes anime2 {
+    0% {
+        left: 100%;
+
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.showNavBar {
+    right: 0% !important;
+}
+
+@media screen and (max-width:870px) {
+    .mobile {
+        display: flex;
+    }
+
+    .smhidden {
+        display: none;
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+        top: 15%;
+        transition: left 0.5s ease-in-out;
+        padding: 42px;
+        right: 100%;
+        height: 80%;
+        background-color: #fff;
+
+    }
+
+    nav ul {
+
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 22px;
+    }
+}

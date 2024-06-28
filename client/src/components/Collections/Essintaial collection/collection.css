@@ -1,0 +1,43 @@
+.collectionbtns {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 71px;
+    font-weight: 600;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 0.4rem 2rem;
+}
+
+.collectionbtns:hover {
+    background-color: #16153C;
+    color: #fff;
+}
+
+.imgs-collections {
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+}
+
+.imgs-collections:hover {
+    transform: scale(1.05);
+}
+
+.imgs-collections:hover+.collectionbtns {
+    background-color: #16153C;
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .collectionbtns {
+        padding: 0.4rem 1.3rem;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
