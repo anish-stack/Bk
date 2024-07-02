@@ -66,7 +66,7 @@ const Header = () => {
             {/* no touchable */}
             <div className='navbar flex items-center whitespace-nowrap  bg-white  shadow-md justify-between p-2 gap-2'>
                 <Link to={'/'} className='navbar-brand py-4 w-32'>
-                <h2 className='text-2xl font-bold'>B & K EXPORT TRADE CO</h2>
+                <h2 className=' text-sm md:text-2xl font-bold'>B & K EXPORT TRADE CO</h2>
                     {/* <img src={logo} className='logo' alt="This is B & K EXPORT TRADE COs logo" /> */}
                 </Link>
                 <nav className={`${showMenu ? 'showNavBar' : ''}`}>

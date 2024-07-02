@@ -64,7 +64,7 @@ const CheckOut = () => {
             });
 
             const options = {
-                key: "rzp_test_fdUdrX0kEzotSX",
+                key: "rzp_live_t4ob5K56SzLGac",
                 amount: order.amount || 100,
                 currency: "INR",
                 name: "B & K EXPORT TRADE CO",
